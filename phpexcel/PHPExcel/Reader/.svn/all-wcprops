@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader
+END
+Excel2007.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/Excel2007.php
+END
+Gnumeric.php
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/Gnumeric.php
+END
+IReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/IReadFilter.php
+END
+CSV.php
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/CSV.php
+END
+IReader.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/IReader.php
+END
+OOCalc.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/OOCalc.php
+END
+SYLK.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/SYLK.php
+END
+Excel5.php
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/Excel5.php
+END
+DefaultReadFilter.php
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/DefaultReadFilter.php
+END
+Excel2003XML.php
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Reader/Excel2003XML.php
+END

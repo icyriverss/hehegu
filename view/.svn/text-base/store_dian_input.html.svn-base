@@ -1,0 +1,62 @@
+
+
+
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+        <th colspan="7">{$year}年{$month}</th>
+    </tr>
+    <tr>
+        {for $i=0 to 6}
+        <th>{$arr_days[$i]['week']}</th>
+        {/for}
+    </tr>
+    {foreach $arr_days as $key=>$value}
+        {if $key % 7==0}<tr>{/if}
+        <td {if $use_list[$key+1]}style="background:{$color}"{/if} data-value="{$value['day']}" class="selection_day">{$value['day']}</td>
+        {if ($key+1) % 7 ==0} </tr>{/if}
+    {/foreach}
+    <tr>
+        <th colspan="7">
+            <div style="background:{$color};width:20px;height:10px;display:inline-block;"></div> 表示该日期有存在数据。可直接点击日期修改/添加当日数据。
+        </th>
+    </tr>
+    <tr>
+        <th colspan="7" style="font-weight:bold;" class="txtleft">录入水电信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;选择日期：<input type="text" name="date" class="input2" onfocus="WdatePicker()" value="{$startdate}" readonly></th>
+    </tr>
+    <tr>
+        <th colspan="7">
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                    <th width="60">表编号</th>
+                    <th class="txtleft">表名</th>
+                    <th width="100">用量</th>
+                    <th width="100">消费</th>
+                    <th width="100">期初</th>
+                    <th width="100">预存</th>
+                    <th width="100">指数</th>
+                    <th width="50">倍率</th>
+                    <th width="50">单价</th>
+                </tr>
+                {foreach $biao_list as $k=>$v}
+                <tr class="use_list" data-id="{$v['biao_id']}">
+                    <th>{$v['biao_id']}</th>
+                    <td class="txtleft">{$v['biao_name']}</td>
+                    <td class="yongliang">{$v['yongliang']}</td>
+                    <td class="cost">{$v['cost']}</td>
+                    <td><input type="text" class="input4" name="qichu" value="{$v['qichu']}"></td>
+                    <td><input type="text" class="input4" name="yucun" value="{$v['yucun']}"></td>
+                    <td><input type="text" class="input4" name="zhishu" value="{$v['zhishu']}"></td>
+                    <td class="beilv">{$v['beilv']}</td>
+                    <td class="price">{$v['price']}</td>
+                </tr>
+                {/foreach}
+                <tr>
+                    <th colspan="7" height="50">
+                        <input type="submit" value="提交" class="input-submit">
+                    </th>
+                </tr>
+            </table>
+        </th>
+    </tr>
+</table>

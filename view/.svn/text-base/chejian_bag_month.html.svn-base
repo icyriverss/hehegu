@@ -1,0 +1,30 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th >编码<a class="ico {if $sortBy=='bianhao'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="bianhao"></a></th>
+        <th >名称</th>
+        <th >规格</th>
+        <th >单位</th>
+        <th >成本<a class="ico {if $sortBy=='cost'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="cost"></a></th>
+        <th >进货<a class="ico {if $sortBy=='jinhuo'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="jinhuo"></a></th>
+        <th >调入<a class="ico {if $sortBy=='diaoru'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="diaoru"></a></th>
+        <th >调出<a class="ico {if $sortBy=='diaochu'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="diaochu"></a></th>
+        <th >报损<a class="ico {if $sortBy=='baosun'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="baosun"></a></th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <td>{$info['bianhao']}</td>
+        <td>{$info['name']} </td>
+        <td>{$info['guige']}</td>
+        <td>{$info['kucun_danwei']}</td>
+        <td>{$info['cost']}</td>
+        <td>{$info['jinhuo']}</td>
+        <td>{$info['diaoru']}</td>
+        <td>{$info['diaochu']}</td>
+        <td>{$info['baosun']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

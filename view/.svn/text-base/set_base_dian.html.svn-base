@@ -1,0 +1,25 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th width="50">ID</th>
+        <th class="txtleft">表名</th>
+        <th width="100">是否总表</th>
+        <th width="100">类别</th>
+        <th width="100">操作</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr class="user_list">
+        <th>{$info['biao_type_id']}</th>
+        <td class="txtleft"><a data-value="{$info['biao_type_id']}" data-type="edit">{$info['biao_name']}</a></td>
+        <td>{if $info['istotal']}<span class="dblue">是</span>{else}否{/if}</td>
+        <td>{$info['biao_type']}</td>
+        <th><a data-value="{$info['biao_type_id']}" data-type="edit">修改</a> <a data-value="{$info['biao_type_id']}" data-type="del">删除</a></th>
+    </tr>
+    {/foreach}
+    <tr class="showpage">
+        <th colspan="5"></th>
+    </tr>
+</tbody></table>
+

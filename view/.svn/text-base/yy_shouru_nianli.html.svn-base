@@ -1,0 +1,137 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th rowspan="2" colspan="2">收入分类年历表</th>
+        {foreach $list as $id=>$info}
+        <th>{$info['years']}年</th>
+        {/foreach}
+    </tr>
+    <tr>
+        {foreach $list as $id=>$info}
+        <th>{$info['days']}天</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th rowspan="2" width="10%">按因素</th>
+        <th width="10%">客单价</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['kedanjia']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>客流量</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['keliuliang']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="4">按品种</th>
+        <th>早餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['type_zaocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>饭品</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['type_fanpin']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>副品</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['type_fupin']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>饮品</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['type_yinpin']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="3">按时段</th>
+        <th>早餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zaocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>中餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['wucan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>晚餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['wancan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="3">按结账方式</th>
+        <th>现金</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['xianjin']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>储值</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['chuzhi']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>银行卡</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['yinhangka']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="4">按渠道</th>
+        <th>堂食</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['ch_tangshi']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>外卖</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['ch_waimai']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>团餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['ch_tuan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会展</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['ch_huizhan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="3">按折扣</th>
+        <th>应收</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['cost']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>实收</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['total']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>折扣率</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['discount']}</td>
+        {/foreach}
+    </tr>
+</tbody></table>
+

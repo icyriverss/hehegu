@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>升级您的浏览器</title>
+    <link href="downBrowser.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="mainbody">
+    <div class="downBrowser">
+        <div class="browsersMap">
+        <img src="ie_update.jpg" border="0" usemap="#browsermap" alt="请升级您的浏览器" width="680" height="480"/>
+            <map name="browsermap" id="browsermap" >
+            <area shape="rect" coords="12, 330, 116, 470" href="http://www.firefox.com.cn/"  title="下载火狐浏览器"/>
+            <area shape="rect" coords="169, 330, 326, 470" href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie"  title="下载最新IE浏览器"/>
+            <area shape="rect" coords="388, 330, 520, 470" href="http://dl.softmgr.qq.com/original/Browser/37.0.2017.2_chrome_installer.exe"  title="下载谷歌浏览器"/>
+            <area shape="rect" coords="574, 330, 666, 470" href="http://www.apple.com/cn/safari/"  title="下载苹果浏览器"/>
+            </map>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+</html>

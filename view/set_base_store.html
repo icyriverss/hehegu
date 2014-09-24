@@ -1,0 +1,31 @@
+
+{javascript}
+$this.total_page = Math.ceil(total/perpage);
+{/javascript}
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th  width="50">ID</th>
+        <th width="100">门店ID</th>
+        <th class="txtleft">分店名称</th>
+        <th width="100">开店日期</th>
+        
+        <th width="60">操作</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr class="user_list">
+        <td>{$info['id']}</td>
+        <td>{$info['store_id']}</td>
+        <td class="txtleft"><a data-value="{$info['store_id']}" data-type="edit">{$info['store_name']}</a></td>
+        <td>{$info['startdate']}</td>
+        
+        <td><a data-value="{$info['store_id']}" data-type="edit">修改</a></td>
+    </tr>
+    {/foreach}
+    <tr class="showpage">
+        <th colspan="5">
+        </th>
+    </tr>
+</tbody></table>
+

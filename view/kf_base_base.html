@@ -1,0 +1,33 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th>开发部汇总表</th>
+        <th>当期销售</th>
+        <th>日均销售</th>
+        <th>客流量</th>
+        <th>客单价</th>
+        <th>租金占比</th>
+        <th>营业成本率</th>
+        <th>营业费用率</th>
+        <th>投资回报率</th>
+        <th>保本点完成率</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th>{if $info['istotal']}合计{else}{getStoreName($info['ch_branchno'])}{/if}</th>
+        <td>{$info['total']}</td>
+        <td>{$info['rijun']}</td>
+        <td>{$info['keliuliang']}</td>
+        <td>{$info['kedanjia']}</td>
+        <td>{$info['zujin_percent']}</td>
+        <td>{$info['']}</td>
+        <td>{$info['']}</td>
+        <td>{$info['']}</td>
+        <td>{$info['']}</td>
+        <td>{$info['']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

@@ -1,0 +1,25 @@
+
+
+
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2">日期<a class="ico {if $sortBy=='months'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="months"></a></th>
+        <th width="{80/4}%">用电<a class="ico {if $sortBy=='yongdian'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="yongdian"></a></th>
+        <th width="{80/4}%">厨房用电<a class="ico {if $sortBy=='chufang_dian'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="chufang_dian"></a></th>
+        <th width="{80/4}%">餐厅用电<a class="ico {if $sortBy=='dating_dian'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="dating_dian"></a></th>
+        <th width="{80/4}%">用水<a class="ico {if $sortBy=='yongshui'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="yongshui"></a></th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th width="6%">{$info['month']}</th>
+        <th width="14%">{$info['fest']} </th>
+        <td>{$info['yongdian']}</td>
+        <td>{$info['chufang_dian']}</td>
+        <td>{$info['dating_dian']}</td>
+        <td>{$info['yongshui']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>

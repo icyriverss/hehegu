@@ -1,0 +1,26 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+    
+    <tr>
+        <th width="50">ID</th>
+        <th class="txtleft">姓名</th>
+        <th width="100">部门</th>
+        <th width="150">职位</th>
+        <th width="100">操作</th>
+    </tr>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr class="user_list">
+        <th>{$info['id']}</th>
+        <td class="txtleft"><a data-value="{$info['id']}" data-type="edit">{$info['true_name']}</a></td>
+        <td>{$info['department']}{if $info['department']=='门店'} ({getStoreName($info['store_id'])}){/if}</td>
+        <td>{$info['job']}</td>
+        <th><a data-value="{$info['id']}" data-type="edit">修改</a> <a data-value="{$info['id']}" data-type="del" data-loginid="{$info['loginid']}">删除</a></th>
+    </tr>
+    {/foreach}
+    <tr class="showpage">
+        <th colspan="6">
+        </th>
+    </tr>
+</tbody></table>
+

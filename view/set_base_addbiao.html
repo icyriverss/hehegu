@@ -1,0 +1,25 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+<tbody class="float_left">
+    <tr>
+        <th width="100">表名：</th>
+        <td><input type="text" name="biao_name" id="biao_name" class="input2" value="{$biao_name}"></td>
+    </tr>
+    <tr>
+        <th width="100">是否总表：</th>
+        <td><input type="radio" name="istotal" value="1" {if $istotal} checked{/if}> 是  <input type="radio" name="istotal" value="0" {if !$istotal} checked{/if}> 否</td>
+    </tr>
+    <tr>
+        <th width="100">类别：</th>
+        <td><input type="radio" name="biao_type" value="水表" {if $biao_type=='水表'} checked{/if}> 水表  
+            <input type="radio" name="biao_type" value="电表"  {if $biao_type=='电表'} checked{/if}> 电表  
+            <input type="radio" name="biao_type" value="气表"  {if $biao_type=='气表'} checked{/if}> 气表 
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2" height="50">
+            <input type="submit" value="提交" class="input-submit">
+            </th>
+        </tr>
+</tbody></table>
+

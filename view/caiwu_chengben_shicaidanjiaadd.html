@@ -1,0 +1,45 @@
+
+<table border="0" cellspacing="0" cellpadding="0" id="set_order_type_list" width="100%">
+    <tr>
+        <th colspan="6" style="background:#dedede;border-bottom:1px solid #ccc;height:36px;text-align:left;padding-left:10px;">
+            <span style="float: right;padding-right:20px;height:36px;line-height:36px;">
+                <form>
+                    <span>
+                        Excel导入：
+                    </span>
+                    <input type="file" id="inputExcel" name="inputExcel" />
+                    <button type="button" class="city_submit" id="submit_order">提交Excel</button>
+                    <button type="button" class="city_submit" id="submit_form">提交表单</button>
+                </form>
+            </span>
+        </th>
+    </tr>
+</table>
+<table class="data-load" border="0" cellspacing="0" cellpadding="0">
+    <tbody class="float_left" id="person_add">
+        <tr>
+            <th width="100">存货编码</th>
+            <th>名称</th>
+            <th>计量单位</th>
+            <th>规格型号</th>
+            <th>数量</th>
+            <th>单价</th>
+        </tr>
+        {foreach $list as $i=>$info}
+        <tr>
+            <th>{$info['cInvCode']}</th>
+            <td>{$info['cInvName']}</td>
+            <td>{$info['cInvUnit']}</td>
+            <td>{$info['cInvStd']}</td>
+            <td>{$info['iBzHsl']}</td>
+            <td><input type="text" name="price" stuffcode="{$info['cInvCode']}" class="input2" value='{$info["price"]}'></td>
+        </tr>
+        {/foreach}
+        <tr>
+            <th colspan="6" height="50">
+                <input type="button" value="提交" class="input-submit" id="subBtn">
+            </th>
+        </tr>
+    </tbody>
+</table>
+

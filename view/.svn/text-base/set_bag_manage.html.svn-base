@@ -1,0 +1,15 @@
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th width="100">仓库ID</th>
+        <th class="txtleft">仓库名称</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $bags as $id=>$info}
+    <tr class="user_list">
+        <th>{$info['bag_id']}</th>
+        <td class="txtleft">{$info['bag_name']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

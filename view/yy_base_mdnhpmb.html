@@ -1,0 +1,40 @@
+﻿<table class="data-load" border="0" cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <th colspan="11">门店能耗排名表</th>
+        </tr>
+        <tr>
+            <th rowspan="2">门店</th>
+            <th rowspan="2">收入</th>
+            <th colspan="3">厨房用电</th>
+            <th colspan="3">餐厅用电</th>
+            <th colspan="3">合计用电</th>
+        </tr>
+        <tr>
+            <th>实际用量</th>
+            <th>元耗电量</th>
+            <th>排名</th>
+            <th>实际用量</th>
+            <th>元耗电量</th>
+            <th>排名</th>
+            <th>实际用量</th>
+            <th>元耗电量</th>
+            <th>排名</th>
+        </tr>
+        {foreach $list as $i=>$info}
+        <tr>
+            <th>{$info['store_name']}</th>
+            <td>{$info['shouru']}</td>
+            <td>{$info['chufang']}</td>
+            <td>{$info['chufangbaiyuan']}</td>
+            <td>{$info['chufang_paiming']}</td>
+            <td>{$info['dating']}</td>
+            <td>{$info['datingbaiyuan']}</td>
+            <td>{$info['dating_paiming']}</td>
+            <td>{$info['heji']}</td>
+            <td>{$info['hejibaiyuan']}</td>
+            <td>{$info['heji_paiming']}</td>
+        </tr>
+        {/foreach}
+    </tbody>
+</table>

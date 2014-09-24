@@ -1,0 +1,32 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th>日期</th>
+        <th >编码<a class="ico {if $sortBy=='bianhao'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="bianhao"></a></th>
+        <th>调出部门</th>
+        <th>调入部门</th>
+        <th >名称</th>
+        <th >规格</th>
+        <th >单位</th>
+        <th >成本<a class="ico {if $sortBy=='cost'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="cost"></a></th>
+        <th >数量<a class="ico {if $sortBy=='nums'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="nums"></a></th>
+        <th >金额<a class="ico {if $sortBy=='price'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="price"></a></th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <td>{$info['adddate']}</td>
+        <td>{$info['bianhao']}</td>
+        <td>{getStoreName($info['store_id'])}</td>
+        <td>{getStoreName($info['storeid'])}</td>
+        <td>{$info['name']} </td>
+        <td>{$info['guige']}</td>
+        <td>{$info['kucun_danwei']}</td>
+        <td>{$info['cost']}</td>
+        <td>{$info['nums']}</td>
+        <td>{$info['price']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

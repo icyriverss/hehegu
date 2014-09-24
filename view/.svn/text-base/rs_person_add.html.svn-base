@@ -1,0 +1,109 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+<tbody class="float_left" id="person_add">
+    <tr>
+        <th width="100">姓名：</th>
+        <td><input type="text" name="true_name" class="input2" value="{$true_name}"></td>
+    </tr>
+    <tr>
+        <th width="100">性别：</th>
+        <td><input type="radio" name="sex" value="0" {if $sex==0}checked{/if}> 男 
+            <input type="radio" name="sex" value="0" {if $sex==1}checked{/if}> 女</td>
+    </tr>
+    <tr>
+        <th width="100">出生日期：</th>
+        <td><input type="text" name="birthday" class="input2" value="{$birthday}" onfocus="WdatePicker()" readonly></td>
+    </tr>
+    <tr>
+        <th width="100">学历：</th>
+        <td><input type="radio" name="degree" value="0" {if $degree==0}checked{/if}>初中及以下
+          <input type="radio" name="degree" value="1" {if $degree==1}checked{/if}> 中专及高中
+            <input type="radio" name="degree" value="2" {if $degree==2}checked{/if}> 专科
+            <input type="radio" name="degree" value="3" {if $degree==3}checked{/if}> 本科及以上 
+        </td>
+    </tr>
+    <!--<tr>
+        <th width="100">是否培训：</th>
+        <td><input type="radio" name="train" value="1"  {if $train==1}checked{/if}> 是 
+            <input type="radio" name="train" value="0"  {if $train==0}checked{/if}> 否</td>
+    </tr>-->
+    <tr>
+        <th width="100">证书：</th>
+        <td><input type="text" name="certificate" class="input2" value="{$certificate}" style="width:400px;"> 多个证书之间请用英文逗号分隔，例如“英语四级证书,计算机二级证书”</td>
+    </tr>
+    <tr>
+        <th width="100">生效时间：</th>
+        <td><input type="text" name="begin_time" class="input2" value="{$begin_time}" onfocus="WdatePicker()" readonly> 即入职时间。</td>
+    </tr>
+    <tr>
+        <th width="100">居住地所属：</th>
+        <td>
+            <input type="radio" name="address" value="1" {if $job_nature==1}checked{/if}> 太原/榆次
+            <input type="radio" name="address" value="0" {if $job_nature==0}checked{/if}> 其他地区
+        </td>
+    </tr>    
+    <tr>
+        <th width="100">入职状态：</th>
+        <td>
+            <input type="radio" name="job_nature" value="1" {if $job_nature==1}checked{/if}> 合同工
+            <input type="radio" name="job_nature" value="2" {if $job_nature==2}checked{/if}> 实习
+            <input type="radio" name="job_nature" value="3" {if $job_nature==3}checked{/if}> 小时工
+        </td>
+    </tr>
+    <tr>
+        <th width="100">所属部门：</th>
+        <td>
+            <select name="department" id="department">
+                <option value="">请选择所在部门</option>
+                {foreach $departments as $k=>$v}
+                <option value="{$v['id']}" {if $department==$v['id']}selected{$d=$v['department']}{/if}>{$v['department']}</option>
+                {/foreach}
+            </select>
+        </td>
+    </tr>
+    <tr id="sel_store" {if $d!='门店'}style="display:none;"{/if}>
+        <th width="100">所在门店：</th>
+        <td><select name="store_id" id="store_id">
+            <option value="">请选择所在门店</option>
+            {foreach $stores as $k=>$v}
+            <option value="{$v['store_id']}" {if $store_id==$v['store_id']}selected{/if}>{$v['store_name']}</option>
+            {/foreach}
+            </select></td>
+    </tr>
+    <tr id="sel_chejian" {if $d!='加工中心'}style="display:none;"{/if}>
+        <th width="100">所在车间：</th>
+        <td><select name="chejian_id" id="chejian_id">
+            <option value="">请选择所在车间</option>
+            {foreach $chejians as $k=>$v}
+            <option value="{$v['chejian_id']}" {if $chejian_id==$v['chejian_id']}selected{/if}>{$v['chejian_name']}</option>
+            {/foreach}
+            </select></td>
+    </tr>
+    <tr id="sel_bag" {if $d!='仓库'}style="display:none;"{/if}>
+        <th width="100">所在仓库：</th>
+        <td><select name="bag_id" id="bag_id">
+            <option value="">请选择所在仓库</option>
+            {foreach $bags as $k=>$v}
+            <option value="{$v['bag_id']}" {if $bag_id==$v['bag_id']}selected{/if}>{$v['bag_name']}</option>
+            {/foreach}
+            </select></td>
+    </tr>
+    <tr>
+        <th width="100">职位：</th>
+        <td><span id="position">
+            等待获取职位信息</span>
+
+        </td>
+    </tr>
+    <tr>
+        <th width="100">用户名：</th>
+        <td><input type="text" name="loginid" class="input2" value="{$loginid}"> 绑定后台登录账户。没有请留空。
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2" height="50">
+            <input type="submit" value="提交" class="input-submit">
+            </th>
+        </tr>
+</tbody></table>
+

@@ -1,0 +1,63 @@
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" data-min="1200">
+    <tbody>
+        <tr>
+            <th >
+                <table border="0" cellspacing="0" cellpadding="0" id="set_order_type_list" width="100%">
+                    <tr >
+                        <th colspan="5"  style="background:#dedede;border-bottom:1px solid #ccc;height:72px;text-align:left;padding-left:10px;">
+                            <span style="float: left;">
+                                订货日期：<input type="text" name="order_date" class="input2" onfocus="WdatePicker()" value="{$order_date}" id="order_date" readonly>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="checkbox" id="onlyhas" name="onlyhas" {if $onlyhas}checked{/if}> 只看已选
+                                
+                            </span>
+                            <span style="float: right;padding-right:20px;height:36px;line-height:36px;">
+                                <a class="city_submit" id="clearhas">清空已选</a>&nbsp;&nbsp;&nbsp;&nbsp;<a class="city_submit" id="submit_order">提交订货单</a>
+                            </span>
+                            <br>
+                            订单类别：<select name="order_type" id="order_type">
+                                    <option value="1" {if $order_type==1}selected{/if}>总部需求订单</option>
+                                    <option value="2" {if $order_type==2}selected{/if}>直供需求订单</option>
+                                    <option value="3" {if $order_type==3}selected{/if}>门店调出登记</option>
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span id="bag" {if $order_type!=1}style="display:none;"{/if}>
+                                    选择仓库：
+                                    <select name="bag" >
+                                        {foreach $baglist as $k=>$v}
+                                        <option value="{$v['bagid']}" {if $bagid==$v['bagid']} selected{/if}>{$v['bagname']}</option>
+                                        {/foreach}
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span>
+                                <span id="vendor" {if $order_type!=2}style="display:none;"{/if}>
+                                    选择供应商：
+                                    <select name="vendor">
+                                        {foreach $vendorlist as $k=>$v}
+                                        <option value="{$v['vendorid']}"  {if $vendorid==$v['vendorid']} selected{/if}>{$v['vendorfullname']}</option>
+                                        {/foreach}
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span>
+                                <span id="store" {if $order_type!=3}style="display:none;"{/if}>
+                                    选择调入门店：
+                                    <select name="store">
+                                        {foreach $stores as $k=>$v}
+                                        {if $current_store_id!=$v['store_id']}
+                                        <option value="{$v['store_id']}"  {if $storeid==$v['store_id']} selected{/if}>{$v['store_name']}</option>
+                                        {/if}
+                                        {/foreach}
+                                    </select>&nbsp;&nbsp;&nbsp;&nbsp;
+                                </span>
+                        </th>
+                    </tr>
+                    <tr class="txtleft">
+                        <th id="view_by_type" colspan="5" height="36">按分类查看：
+                            <a {if !$current_type}class="order_type"{/if} data-type="">所有</a>
+                            {foreach $type as $k=>$v}
+                            <a data-type="{$k}" {if $current_type==$k}class="order_type"{/if}>{$k}</a>&nbsp;
+                            {/foreach}
+                        </th>
+                     </tr>
+                </table>
+            </th>
+        </tr>
+    </tbody>
+</table>
+

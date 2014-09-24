@@ -1,0 +1,61 @@
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" data-min="1200">
+    <tbody>
+        <tr>
+            <th >
+                <table border="0" cellspacing="0" cellpadding="0" id="set_order_type_list" width="100%">
+                    <tr>
+                        <th colspan="9" class="txtleft" style="background:#dedede;height:36px;">
+                            {if $current_type}
+                            <span style="float: left;">当前分类：<b id="type_name">{$current_type}({$type[$current_type]})</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <a id="edittype">[修改]</a><a id="deltype">[删除]</a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <a class="city_submit"  id="showall">收起</a>
+                            </span>
+                            {/if}
+                            <span style="float: right;margin-right:10px;">
+                                新增分类：
+                                <input type="text" class="input3" id="newtype" style="width:80px;height:20px !important;line-height:20px !important;height:16px;line-height:16px;position:relative;"><a class="city_submit"  id="addtype">新增</a>
+                            </span>
+                        </th>
+                    </tr>
+                </table>
+            </th>
+        </tr>
+    <tr>
+        <th valign="top">
+            <table border="0" cellspacing="0" cellpadding="0" id="pro_list" width="100%">
+                <tr>
+                    <th colspan="8" class="txtleft" style="background:#dedede;height:36px;">
+                        <b>添加物品</b> &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" id="quick_search" {if $quick_search}checked{/if}> 快速查询  
+                        <a class="ico tips"><div class="tips_content" style="width:300px;"><div class="tips_arrow">◆</div>
+                            支持按
+                            <b><font color="red">食材编码</font></b>、
+                            <b><font color="red">名称</font></b>、
+                            <b><font color="red">名称拼音首字母</font></b>搜索。<br>
+                            支持多关键词搜索，关键词之间以空格分开。如搜索 <b><font color="red">010 肥牛 GL</font></b> ，即可搜索到 <b><font color="red">咖喱（加肥牛）</font></b><br>
+                            
+                            选中快速查询后，可即输即查，无需点击 <b><font color="red">查询</font></b> 按钮。<br>
+                            如电脑配置较低，出现卡机情况，请去掉“快速查询”勾选，输入关键词后，点击“查询”按钮进行搜索。
+
+                         </div></a>
+                        关键词：<input type="text" id="keyword" class="input3" style="height:20px !important;line-height:20px !important;height:16px;line-height:16px;"> 
+                        <a class="city_submit" id="search_start">查询</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th width="100">编码</th>
+                    <th>名称</th>
+                    <th width="120">规格</th>
+                    <th width="70">库存单位</th>
+                    <th width="70">包装单位</th>
+                    <th width="80">包装换算率</th>
+                    <th width="80">定额换算率</th>
+                    <th width="100">操作</th>
+                </tr>
+            </table>
+        </th>
+    </tr>
+    </tbody>
+</table>
+

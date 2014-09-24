@@ -1,0 +1,52 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2" width="20%" rowspan="2">绩效指标统计表</th>
+        <th colspan="3">销售</th>
+        <th colspan="3">顾客</th>
+        <th colspan="3">员工</th>
+    </tr>
+    <tr>
+        <th>客单价</th>
+        <th>价值数</th>
+        <th>丰收记录</th>
+
+        <th>客流量</th>
+        <th>人气数</th>
+        <th>客诉</th>
+
+        <th>质量</th>
+        <th>工时收入</th>
+        <th>幸福奖</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th rowspan="2" width="10%">{if $info['istotal']}合计{else}{getStoreName($info['ch_branchno'])}{/if}</th>
+        <th width="10%">本期</th>
+        <td>{$info['kedanjia']}</td>
+        <td>{$info['jiazhishu']}</td>
+        <td>{$info['fengshou']}</td>
+        <td>{$info['keliuliang']}</td>
+        <td>{$info['renqi']}</td>
+        <td>{$info['kesu']}</td>
+        <td>{$info['zhiliang']}</td>
+        <td>{$info['gongshi']}</td>
+        <td>{$info['xingfu']}</td>
+    </tr>
+    <tr>
+        <th>目标</th>
+        <td>{$info['kedanjia_mubiao']}</td>
+        <td>{$info['jiazhishu_mubiao']}</td>
+        <td>{$info['fengshou_mubiao']}</td>
+        <td>{$info['keliuliang_mubiao']}</td>
+        <td>{$info['renqi_mubiao']}</td>
+        <td>{$info['kesu_mubiao']}</td>
+        <td>{$info['zhiliang_mubiao']}</td>
+        <td>{$info['gongshi_mubiao']}</td>
+        <td>{$info['xingfu_mubiao']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

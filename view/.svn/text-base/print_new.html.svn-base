@@ -1,0 +1,121 @@
+{if $stores}
+<h1 align="center" style="height:50px;line-height:50px;font-size:20px;">山西和合谷仓库出库汇总单</h1>
+<!--<table border="0" cellspaceing="5" cellpadding="1" style="margin-bottom: 10px;">
+    <tr>
+        <td>汇总单据
+        </td>
+    </tr>
+</table>-->
+{else}
+<h4 align="center">山西和合谷仓库出库单 编号：{$info['order_id']}</h4>
+
+<table border="0" cellspaceing="5" cellpadding="1" style="margin-bottom:10px;">
+    <tr>
+        <td width="80">单据类别：</td>
+        <td width="120"><u>{$info['order_name']}</u></td>
+        <td width="80">单据编号：</td>
+        <td class="value" colspan="3"><u>{$info['order_id']}</u></td>
+    </tr>
+    <tr>
+        <td>订货部门：</td>
+        <td><u>{$info['order_from']}</u></td>
+        <td>订货人：</td>
+        <td width="120"><u>{$info['user_name']}</u></td>
+        <td width="80">订货日期：</td>
+        <td><u>{$info['order_date']}</u></td>
+    </tr>
+    <tr>
+        <td>发货部门：</td>
+        <td><u>{$info['send_bumen']}</u></td>
+        <td>发货人：</td>
+        <td><u>{$info['send_user_name']}</u></td>
+        <td>发货日期：</td>
+        <td><u>{$info['senddate']}</u></td>
+    </tr>
+</table>
+{/if}
+<table border="1" cellspacing="0" cellpadding="1" style="border-collapse:collapse;line-height:18px;" width="100%">
+
+
+{foreach $rowlist as $k=>$rows}
+{$maxnums=$rows['maxnums']}
+{for $i=0 to $maxnums-1}
+    {if $i==0}
+    <tr>
+        <td rowspan="3">发货信息</td>
+        <td colspan="{$numsPerRow * $typenumsPerRow}" align="center">货品名称</td>
+    </tr>
+    <tr>
+        {foreach $rows['row'] as $kk=>$type}
+        <td colspan="{$numsPerRow}" align="center">{$type['name']}</td>
+        {/foreach}
+    </tr>
+    {/if}
+    <tr>
+        {if $i>0}
+        <td>&nbsp;</td>
+        {/if}
+        {foreach $rows['row'] as $kk=>$type}
+            {for $m=0 to $numsPerRow-1}
+            {if $type['list'][$i]}
+            <td>{$type['list'][$i][$m]['name']}</td>
+            {else}
+            <td>&nbsp;</td>
+            {/if}
+            {/for}
+        {/foreach}
+    </tr>
+    <tr>
+        <td>应发</td>
+        {foreach $rows['row'] as $kk=>$type}
+            {for $m=0 to $numsPerRow-1}
+            {if $type['list'][$i]}
+            <td>{$type['list'][$i][$m]['order_nums']}</td>
+            {else}
+            <td>&nbsp;</td>
+            {/if}
+            {/for}
+        {/foreach}
+    </tr>
+    <tr>
+        <td>实发</td>
+        {foreach $rows['row'] as $kk=>$type}
+            {for $m=0 to $numsPerRow-1}
+            {if $type['list'][$i]}
+            <td>{$type['list'][$i][$m]['real_send']}</td>
+            {else}
+            <td>&nbsp;</td>
+            {/if}
+            {/for}
+        {/foreach}
+    </tr>
+    <tr>
+        <td>确认数量</td>
+        {foreach $rows['row'] as $kk=>$type}
+            {for $m=0 to $numsPerRow-1}
+            <td>&nbsp;</td>
+            {/for}
+        {/foreach}
+    </tr>
+{/for}
+{if $k!=$rowlist['length']-1}
+<tr>
+<td colspan="{$numsPerRow * $typenumsPerRow + 1}">&nbsp;</td>
+</tr>
+<tr>
+<td colspan="{$numsPerRow * $typenumsPerRow + 1}">&nbsp;</td>
+</tr>
+{/if}
+{/foreach}
+</table>
+<table border="0" cellspaceing="5" cellpadding="1" height="30" style="font-size:14px;margin-top:10px;font-weight:bold;">
+    <tr>
+        <td >库管签字：</td>
+        <td width=120 style="border-bottom:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td >司机签字：</td>
+        <td width=120 style="border-bottom:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+        <td>收货部门签字：</td>
+        <td width=120 style="border-bottom:1px solid #000;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    </tr>
+</table>
+

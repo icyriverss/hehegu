@@ -1,0 +1,55 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    
+    <tr>
+        <th width="120">季历表</th>
+        {foreach $years as $id=>$info}
+        <th>{$info['title']}</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>销售收入</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>客流量</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_zaocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>客单价</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_zaoban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>租金占比</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>投资回报率</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>净利润率</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>保本点完成率</th>
+        {foreach $years as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+</tbody></table>
+

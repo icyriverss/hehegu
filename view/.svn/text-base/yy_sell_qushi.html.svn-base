@@ -1,0 +1,36 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th rowspan="2" width="10%">销售趋势表</th>
+        <th rowspan="2" width="10%">实际</th>
+        <th rowspan="2" width="10%">上期</th>
+        <th colspan="2">上期比</th>
+        <th rowspan="2" width="10%">同期</th>
+        <th colspan="2">同期比</th>
+        <th rowspan="2" width="10%">预算</th>
+        <th rowspan="2" width="10%">预算完成比</th>
+    </tr>
+    <tr>
+        <th width="10%">合计比</th>
+        <th width="10%">同店比</th>
+        <th width="10%">合计比</th>
+        <th width="10%">同店比</th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $fields as $k=>$v}
+    <tr>
+        <th>{$titles[$k]}</th>
+        <td>{if $list[{$v}]}{$list[{$v}]}{else}--{/if}</td>
+        <td>{if $list['p'+{$v}]}{$list['p'+{$v}]}{else}--{/if}</td>
+        <td>{$list[{$v}+'_percent_p_all']}</td>
+        <td>{$list[{$v}+'_percent_p']}</td>
+        <td>{if $list['s'+{$v}]}{$list['s'+{$v}]}{else}--{/if}</td>
+        <td>{$list[{$v}+'_percent_s_all']}</td>
+        <td>{$list[{$v}+'_percent_s']}</td>
+        <td>{$list[{$v}+'_yusuan']}</td>
+        <td>{$list[{$v}+'_yusuan_percent']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

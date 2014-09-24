@@ -1,0 +1,68 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+    <th colspan="5" style="background: #dedede; border-bottom: 1px solid #ccc; height: 72px; text-align: left; padding-left: 10px;">
+            <span style="float: left;">
+                选择部门：
+                <select name="department">
+                    <option value="" }>请选择部门</option>
+                    {foreach $departments as $k=>$v}
+                    <option value="{$v['id']}" {if $department_id==$v['id']}selected{/if}>{$v['department']}</option>
+                    {/foreach}
+                </select>
+                
+                <span id="store_id" {if $department!='门店'}style="display:none;"{/if}>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                选择门店：
+                <select name="store_id">
+                <option value="" }>请选择所在门店</option>
+                {foreach $stores as $k=>$v}
+                <option value="{$v['store_id']}" {if $store_id==$v['store_id']}selected{/if}>{$v['store_name']}</option>
+                {/foreach}
+                </select></span>
+                
+                <span id="chejian_id" {if $department!='加工中心'}style="display:none;"{/if}>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                选择车间：
+                <select name="chejian_id">
+                <option value="" }>请选择所在车间</option>
+                {foreach $chejians as $k=>$v}
+                <option value="{$v['chejian_id']}" {if $chejian_id==$v['chejian_id']}selected{/if}>{$v['chejian_name']}</option>
+                {/foreach}
+                </select></span>
+                
+                <span id="bag_id" {if $department!='仓库'}style="display:none;"{/if}>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                选择仓库：
+                <select name="bag_id">
+                <option value="" }>请选择所在仓库</option>
+                {foreach $bags as $k=>$v}
+                <option value="{$v['bag_id']}" {if $bag_id==$v['bag_id']}selected{/if}>{$v['bag_name']}</option>
+                {/foreach}
+                </select></span>
+                <br>
+                <a class="city_submit" id="search_job">搜索</a>
+            </span>
+        </th>
+    <tr>
+        <th width="50">ID</th>
+        <th class="txtleft">姓名</th>
+        <th width="100">部门</th>
+        <th width="150">职位</th>
+        <th width="100">操作</th>
+    </tr>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr class="user_list">
+        <th>{$info['id']}</th>
+        <td class="txtleft"><a data-value="{$info['id']}" data-type="edit">{$info['true_name']}</a></td>
+        <td>{$info['department']}{if $info['department']=='门店'} ({getStoreName($info['store_id'])}){/if}</td>
+        <td>{$info['job']}</td>
+        <th><a data-value="{$info['id']}" data-type="edit">修改</a> <a data-value="{$info['id']}" data-type="del" data-loginid="{$info['loginid']}">删除</a></th>
+    </tr>
+    {/foreach}
+    <tr class="showpage">
+        <th colspan="6">
+        </th>
+    </tr>
+</tbody></table>
+

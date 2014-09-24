@@ -1,0 +1,27 @@
+<!-- 特殊店管理 -->
+<table class="data-load" border="0" cellspacing="0" cellpadding="0">
+    <tbody class="float_left">
+        <tr>
+            <th width="100"><b>门店</b></th>
+            <th><b>是否问题店</b></th>
+            <th><b>是否模范店</b></th>
+        </tr>
+        {foreach $stores as $i=>$info}
+        <tr>
+            <th>{$info['store_name']}</th>
+            <td>
+                <input type="checkbox" name="is_wt" {if $info['is_wt']}checked{/if} value="{$info['store_id']}" />
+            </td>
+            <td>
+                <input type="checkbox" name="is_mf" {if $info['is_mf']}checked{/if} value="{$info['store_id']}" />
+            </td>
+        </tr>
+        {/foreach}
+        <tr>
+            <th colspan="3" height="50">
+                <input type="submit" value="提交" class="input-submit">
+            </th>
+        </tr>
+    </tbody>
+</table>
+<!--/特殊店管理 -->

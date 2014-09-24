@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart
+END
+Layout.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/Layout.php
+END
+Legend.php
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/Legend.php
+END
+Title.php
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/Title.php
+END
+DataSeries.php
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/DataSeries.php
+END
+DataSeriesValues.php
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/DataSeriesValues.php
+END
+PlotArea.php
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Chart/PlotArea.php
+END

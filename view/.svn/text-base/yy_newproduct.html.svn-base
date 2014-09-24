@@ -1,0 +1,36 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th rowspan="2"  width="10%">新品需求统计表</th>
+        <th width="10%">分类</th>
+        {foreach $dishlist as $id=>$info}
+        <th width="{80/count($dishlist)}%">{$info['vch_seriesname']}</th>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>名称</th>
+        {foreach $dishlist as $id=>$info}
+        <th>{$info['vch_dishname']}</th>
+        {/foreach}
+    </tr>
+       
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th rowspan="2">{if $info['istotal']}合计{else}{getStoreName($info['ch_branchno'])}{/if}</th>
+        <th>本期</th>
+        {foreach $dishlist as $id=>$newinfo}
+        <td>{$info[$newinfo['ch_dishno']]}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>占比</th>
+        {foreach $dishlist as $id=>$newinfo}
+        <td>{$info['percent_'+$newinfo['ch_dishno']]}</td>
+        {/foreach}
+        </tr>
+    {/foreach}
+    
+</tbody></table>
+

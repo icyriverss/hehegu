@@ -1,0 +1,95 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="3" rowspan="2">人事情况汇总表</th>
+        <th rowspan="2">实际</th>
+        <th rowspan="2">上期</th>
+        <th colspan="2">上期比</th>
+        <th rowspan="2">同期</th>
+        <th colspan="2">同期比</th>
+    </tr>
+    <tr>
+        <th>合计比</th>
+        <th>同店比</th>
+        <th>合计比</th>
+        <th>同店比</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th rowspan="13" width="90">人事管理</th>
+        <th rowspan="9" width="120">人员动态统计表</th>
+        {$rows = 0}
+        {foreach $rydt as $k=>$v}
+        {if $v['type']==1}
+        {if $rows>0}<tr>{/if}
+        <th width="140">{$v['title']}</th>
+        <td>{$v['shiji']}</td>
+        <td>{$v['shangqi']}</td>
+        <td>{$v['shangqi_hejibi']}</td>
+        <td>{$v['shangqi_tongdianbi']}</td>
+        <td>{$v['tongqi']}</td>
+        <td>{$v['tongqi_hejibi']}</td>
+        <td>{$v['tongqi_tongdianbi']}</td>
+        </tr>
+        {$rows=$rows+1}
+        {/if}
+        {/foreach}
+    
+    <tr>
+        <th rowspan="4">在岗状况统计表</th>
+        {$rows = 0}
+        {foreach $rydt as $k=>$v}
+        {if $v['type']==2}
+        {if $rows>0}<tr>{/if}
+        <th width="140">{$v['title']}</th>
+        <td>{$v['shiji']}</td>
+        <td>{$v['shangqi']}</td>
+        <td>{$v['shangqi_hejibi']}</td>
+        <td>{$v['shangqi_tongdianbi']}</td>
+        <td>{$v['tongqi']}</td>
+        <td>{$v['tongqi_hejibi']}</td>
+        <td>{$v['tongqi_tongdianbi']}</td>
+        </tr>
+        {$rows=$rows+1}
+        {/if}
+        {/foreach}
+    <tr>
+        <th rowspan="11">人事绩效</th>
+        <th rowspan="3">人员结构表</th>
+        {$rows = 0}
+        {foreach $rydt as $k=>$v}
+        {if $v['type']==3}
+        {if $rows>0}<tr>{/if}
+        <th width="140">{$v['title']}</th>
+        <td>{$v['shiji']} {if $k=='degree' || $k=='sex'}%{/if}</td>
+        <td>{$v['shangqi']} {if $k=='degree' || $k=='sex'}%{/if}</td>
+        <td>{$v['shangqi_hejibi']}</td>
+        <td>{$v['shangqi_tongdianbi']}</td>
+        <td>{$v['tongqi']}  {if $k=='degree' || $k=='sex'}%{/if}</td>
+        <td>{$v['tongqi_hejibi']}</td>
+        <td>{$v['tongqi_tongdianbi']}</td>
+        </tr>
+        {$rows=$rows+1}
+        {/if}
+        {/foreach}
+    <tr>
+        <th rowspan="8">人力指标统计</th>
+        {$rows = 0}
+        {foreach $rydt as $k=>$v}
+        {if $v['type']==4}
+        {if $rows>0}<tr>{/if}
+        <th width="140">{$v['title']}</th>
+        <td>{$v['shiji']}</td>
+        <td>{$v['shangqi']}</td>
+        <td>{$v['shangqi_hejibi']}</td>
+        <td>{$v['shangqi_tongdianbi']}</td>
+        <td>{$v['tongqi']}</td>
+        <td>{$v['tongqi_hejibi']}</td>
+        <td>{$v['tongqi_tongdianbi']}</td>
+        </tr>
+        {$rows=$rows+1}
+        {/if}
+        {/foreach}
+</tbody></table>
+

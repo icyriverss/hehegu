@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script>
+        var version = window.location.hash === '#debug' ? Math.random() : window.location.href.indexOf('hhg.x.com') ? Math.random() : 'v1.0.0120';
+
+        var agent = navigator.userAgent;
+        if (agent.indexOf("MSIE 6.0") > 0 || agent.indexOf("MSIE 7.0") > 0 || agent.indexOf("MSIE 8.0") > 0 || agent.indexOf("MSIE 9.0") > 0) {
+            window.location.href = 'updatebrowser.html';
+        }
+    </script>
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="class/jquery.js"></script>
+    <script type="text/javascript" src="class/flotr2.ie.min.js"></script>
+    <script type="text/javascript" src="class/flotr2.min.js"></script>
+    <script type="text/javascript" src="class/template.js"></script>
+    <script type="text/javascript" src="class/calconvert.js"></script>
+    <script type="text/javascript" src="class/date/WdatePicker.js"></script>
+    <script type="text/javascript" src="control/load.js"></script>
+    <script src="class/ajaxfileupload.js"></script>
+    <title>和合谷报表系统</title>
+</head>
+<body class="main">
+    <div class="main">
+        <div class="top">
+            <div class="logo"><img src="images/logo.png" alt="" /></div>
+            <div class="user">当前账户：游客</div>
+        </div>
+        <div id="fullbg"></div>
+        <div id="message"></div>
+    </div>
+    <script>
+        document.write('<iframe src="print.html?ver=' + version + '" style="display:none;" id="iframe_print"><\/iframe>');
+    </script>
+</body>
+</html>

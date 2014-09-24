@@ -1,0 +1,17 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th width="150">调出部门</th>
+        <th width="150">调入部门</th>
+        <th class="txtleft">金额<a class="ico {if $sortBy=='price'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="price"></a></th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <td>{getStoreName($info['store_id'])}</td>
+        <td>{getStoreName($info['storeid'])}</td>
+        <td class="txtleft">{$info['price']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>

@@ -1,0 +1,31 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2">能源消耗统计表</th>
+        <th>用电</th>
+        <th>厨房用电</th>
+        <th>餐厅用电</th>
+        <th>用水</th>
+        
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th rowspan="2" width="10%">{if $info['istotal']}合计{else}{getStoreName($info['store_id'])}{/if}</th>
+        <th width="10%">本期用量 </th>
+        <td>{$info['yongdian']}</td>
+        <td>{$info['chufang_dian']}</td>
+        <td>{$info['dating_dian']}</td>
+        <td>{$info['yongshui']}</td>
+    </tr>
+    <tr>
+        <th>占收入比</th>
+        <td>{$info['yongdian_percent']}</td>
+        <td>{$info['chufang_dian_percent']}</td>
+        <td>{$info['dating_dian_percent']}</td>
+        <td>{$info['yongshui_percent']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

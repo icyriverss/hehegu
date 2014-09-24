@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA
+END
+LUDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/LUDecomposition.php
+END
+CholeskyDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/CholeskyDecomposition.php
+END
+SingularValueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/SingularValueDecomposition.php
+END
+CHANGELOG.TXT
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/CHANGELOG.TXT
+END
+QRDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/QRDecomposition.php
+END
+EigenvalueDecomposition.php
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php
+END
+Matrix.php
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/hehegu/!svn/ver/2/trunk/phpexcel/PHPExcel/Shared/JAMA/Matrix.php
+END

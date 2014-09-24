@@ -1,0 +1,32 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+<tbody class="float_left">
+    <tr>
+        <th width="100">用户组名：</th>
+        <td><input type="text" name="level_name" id="level_name" class="input2" value="{$level_name}"></td>
+    </tr>
+
+    <tr>
+        <th width="100" valign="top">权限设置：</th>
+        <td id="power_list">
+            {foreach $list as $k=>$v}
+            <input type="checkbox" name="power" value="{$k}" {if $power[$k]} checked{/if}> {$k}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a data-type="top" data-value="{$k}" data-status="0">全选本部门</a><br>
+                {foreach $v as $aa=>$a}
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="checkbox" name="power" value="{$a['moudle']}" {if $power[$a['moudle']]} checked{/if} data-top="{$k}"> {$a['title']}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a data-type="parent" data-value="{$a['moudle']}"  data-status="0">全选本类</a><br>
+                    {foreach $a['child'] as $bb=>$b}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" name="power" value="{$b['moudle']}" {if $power[$b['moudle']]} checked{/if} data-top="{$k}" data-parent="{$a['moudle']}"> {$b['title']}<br>
+                    {/foreach}
+                {/foreach}
+            {/foreach}
+        </td>
+    </tr>
+    <tr>
+        <th colspan="2" height="50">
+            <input type="submit" value="提交" class="input-submit">
+            </th>
+        </tr>
+</tbody></table>
+

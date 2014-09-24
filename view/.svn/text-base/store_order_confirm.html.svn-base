@@ -1,0 +1,40 @@
+<table class="data-load" border="0" cellspacing="0" cellpadding="0" data-min="1200">
+    <tr>
+        <th colspan="6" height="50" class="txtleft">
+            <input type="submit" value="确认提交" class="city_submit">
+        </th>
+    </tr>
+    <tr>
+        <th colspan="6" class="txtleft">
+            订单类别：{$order_name}&nbsp;&nbsp;&nbsp;&nbsp;
+            {if $current_store_id}发出部门：{getStoreName($current_store_id)}&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+            {if $order_type==1}订货仓库：{$bagname}&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+            {if $order_type==2}供应商：{$vendorname}&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+            {if $order_type==3}调入门店：{$storename}&nbsp;&nbsp;&nbsp;&nbsp;{/if}
+            订货日期：{$order_date}
+            </th>
+    </tr>
+    <tr>
+        <th width="100">分类</th>
+        <th width="100">编码</th>
+        <th class="txtleft">名称</th>
+        <th width="120">规格</th>
+        <th width="80">订货数量</th>
+        <th width="70">单位</th>
+    </tr>
+    {foreach $list as $k=>$v}
+        <tr>
+            {if $v['goods_rowspan']==0}<th rowspan="{$type[$v['goods_type']]['total']}">{$v['goods_type']}</th>{/if}
+            <td>{$v['cInvCode']}</td>
+            <td class="txtleft">{$v['cInvName']}</td>
+            <td>{if($v['cInvStd'])}{$v['cInvStd']}{/if}</td>
+            <td>{$v['order_nums']}</td>
+            <td>{$v['cInvUnit']}</td>
+        </tr>
+    {/foreach}
+    <tr>
+        <th colspan="6" height="50" class="txtleft">
+            <input type="submit" value="确认提交" class="city_submit">
+        </th>
+    </tr>
+</table>

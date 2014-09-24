@@ -1,0 +1,67 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    
+    <tr>
+        <th rowspan="2">会员销售月历表</th>
+        {foreach $months as $id=>$info}
+        <th  width="6.6%">{$info['month']}</th>
+        {/foreach}
+    </tr>
+    <tr>
+        {foreach $months as $id=>$info}
+        <th>{$info['fest']}</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>新增会员数</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>新增积分</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_zaocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会员销售</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_zaoban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会员外卖</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>积分兑换</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会员客单价</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会员客流量</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>会员折扣率</th>
+        {foreach $months as $id=>$info}
+        <td>{$info['total_wanban']}</td>
+        {/foreach}
+    </tr>
+    
+</tbody></table>
+

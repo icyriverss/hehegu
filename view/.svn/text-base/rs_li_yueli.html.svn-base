@@ -1,0 +1,167 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="3" rowspan="2">人事情况月历表</th>
+        {foreach $list as $id=>$info}
+        <th>{$info['month']}</th>
+        {/foreach}
+    </tr>
+    <tr>
+        {foreach $list as $id=>$info}
+        <th>{$info['fest']}</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th rowspan="13" width="90">人事管理</th>
+        <th rowspan="9" width="120">人员动态统计表</th>
+        <th width="140">离职人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_lz']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>录用人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_ly']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>转正人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_zz']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>实习人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_sx']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>晋升人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_js']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>加薪人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_jx']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>外派人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_wp']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>长假人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_cj']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>外借人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rydt_wj']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="4">在岗状况统计表</th>
+        <th>编制人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['bzrs']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>在岗人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zgzk_zg']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>合同工人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zgzk_ht']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>小时工人数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zgzk_xs']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="11">人事绩效</th>
+        <th rowspan="3">人员结构表</th>
+        <th>平均年龄</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['age']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>本科占比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['degree']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>男性占比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['sex']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="8">人力指标统计</th>
+        <th>工时收入</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['gssr']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>人力成本占营收比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rlcb']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>工资占营收比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['gzzb']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>绩效奖金占营收比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['jxzb']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>人均产值（万元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rjcz']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>人均成本（元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rjcb']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>人均工资（元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['rjgz']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>离职率</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['lzl']}</td>
+        {/foreach}
+    </tr>
+</tbody></table>
+

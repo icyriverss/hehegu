@@ -1,0 +1,464 @@
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+<tbody>
+    <tr>
+        <th colspan="3"><b>预算进度完成统计</b></th>
+        <th colspan="4"><b>分类销售统计</b></th>
+        <th colspan="4"><b>绩效指标统计</b></th>
+    </tr>
+    <tr>
+        <th width="{100/11}%">分类</th>
+        <th width="{100/11}%">本期</th>
+        <th width="{100/11}%">差异额</th>
+
+        <th width="{100/11}%">分类</th>
+        <th width="{100/11}%">项目</th>
+        <th width="{100/11}%">本期</th>
+        <th width="{100/11}%">占比</th>
+
+        <th width="{100/11}%">分类</th>
+        <th width="{100/11}%">项目</th>
+        <th width="{100/11}%">本期</th>
+        <th width="{100/11}%">目标</th>
+    </tr>
+    <tr>
+        <th>销售额</th>
+        <td>{$total}</td>
+        <td>{$total_chayi}</td>
+
+
+        <th rowspan="2">按因素</th>
+        <th>客单价</th>
+        <td>{$kedanjia}</td>
+        <td>--</td>
+
+        <th rowspan="3">销售</th>
+        <th>客单价</th>
+        <td>{$kedanjia}</td>
+        <td>{$kedanjia_mubiao}</td>
+
+    </tr>
+
+    <tr>
+        <th>早餐</th>
+        <td>{$zaocan}</td>
+        <td>{$zaocan_chayi}</td>
+
+        <th>客流量</th>
+        <td>{$keliuliang}</td>
+        <td>{$keliuliang_chayi}</td>
+
+        <th>价值数</th>
+        <td>{$jiazhishu}</td>
+        <td>{$jiazhishu_mubiao}</td>
+
+    </tr>
+
+    <tr>
+        <th>早班</th>
+        <td>{$wucan}</td>
+        <td>{$wucan_chayi}</td>
+
+        <th rowspan="4">按品种</th>
+        <th>早餐</th>
+        <td>{$type_zaocan}</td>
+        <td>{$type_zaocan_percent}</td>
+
+        <th>丰收记录</th>
+        <td>{$fengshou}</td>
+        <td>{$fengshou_mubiao}</td>
+
+    </tr>
+
+    <tr>
+        <th>晚班</th>
+        <td>{$wancan}</td>
+        <td>{$wancan_chayi}</td>
+
+        
+        <th>饭品</th>
+        <td>{$type_fanpin}</td>
+        <td>{$type_fanpin_percent}</td>
+
+        <th rowspan="3">顾客</th>
+        <th>客流量</th>
+        <td>{$keliuliang}</td>
+        <td>{$keliuliang_mubiao}</td>
+
+    </tr>
+    <tr>
+        <th>外送</th>
+        <td>{$waisong}</td>
+        <td>{$waisong_chayi}</td>
+
+        
+        <th>副品</th>
+        <td>{$type_fupin}</td>
+        <td>{$type_fupin_percent}</td>
+
+        <th>人气数</th>
+        <td>{$renqi}</td>
+        <td>{$renqi_mubiao}</td>
+
+    </tr>
+
+    <tr>
+        <th>客流量</th>
+        <td>{$keliuliang}</td>
+        <td>{$keliuliang_chayi}</td>
+
+        
+        <th>饮品</th>
+        <td>{$type_yinpin}</td>
+        <td>{$type_yinpin_percent}</td>
+
+        <th>客诉</th>
+        <td>{$kesu}</td>
+        <td>{$kesu_mubiao}</td>
+
+    </tr>
+    <tr>
+        <th>经营利润率</th>
+        <td>{$lirun}</td>
+        <td>{$lirun_chayi}</td>
+
+        <th rowspan="3">按时段</th>
+        <th>早餐</th>
+        <td>{$zaocan}</td>
+        <td>{$zaocan_percent}</td>
+
+        <th rowspan="3">员工</th>
+        <th>质量</th>
+        <td>{$zhiliang}</td>
+        <td>{$zhiliang_mubiao}</td>
+    </tr>
+
+    <tr>
+        <th colspan="3"><b>日均销售统计</b></th>
+
+        <th>中餐</th>
+        <td>{$wucan}</td>
+        <td>{$wucan_percent}</td>
+
+        <th>工时收入</th>
+        <td>{$gongshi}</td>
+        <td>{$gongshi_mubiao}</td>
+    </tr>
+
+
+    <tr>
+        <th>分类</th>
+        <th>本期</th>
+        <th>占比</th>
+
+        <th>晚餐</th>
+        <td>{$wancan}</td>
+        <td>{$wancan_percent}</td>
+
+        <th>幸福奖</th>
+        <td>{$xingfu}</td>
+        <td>{$xingfu_mubiao}</td>
+
+    </tr>
+
+    <tr>
+        <th>销售额</th>
+        <td>{$rijun_total}</td>
+        <td>--</td>
+
+        <th rowspan="3">按结账方式</th>
+        <th>现金</th>
+        <td>{$xianjin}</td>
+        <td>{$xianjin_percent}</td>
+
+        
+        <th rowspan="3">损益</th>
+        <th>营业成本率</th>
+        <td>{$chengbenlv}</td>
+        <td>{$chengbenlv_mubiao}</td>
+        
+        
+        
+
+    
+    
+    </tr>
+
+    <tr>
+        <th>早餐</th>
+        <td>{$rijun_zaocan}</td>
+        <td>{$rijun_zaocan_percent}</td>
+
+        <th>储值</th>
+        <td>{$chuzhi}</td>
+        <td>{$chuzhi_percent}</td>
+
+        <th>营业费用率</th>
+        <td>{$xingfu}</td>
+        <td>{$xingfu_mubiao}</td>
+        
+        
+        
+        
+
+    </tr>
+
+     <tr>
+        <th>早班</th>
+        <td>{$rijun_wucan}</td>
+        <td>{$rijun_wucan_percent}</td>
+
+        <th>银行卡</th>
+        <td>{$yinhangka}</td>
+        <td>{$yinhangka_percent}</td>
+
+        
+        
+        <th>净利润率</th>
+        <td>{$xingfu}</td>
+        <td>{$xingfu_mubiao}</td>
+        
+        
+
+    </tr>
+    <tr>
+        <th>晚班</th>
+        <td>{$rijun_wancan}</td>
+        <td>{$rijun_wancan_percent}</td>
+
+        <th rowspan="4">按渠道</th>
+        <th>堂食</th>
+        <td>{$ch_tangshi}</td>
+        <td>{$ch_tangshi_percent}</td>
+
+        
+        <th colspan="4"><b>能源消耗统计</b>
+            
+        
+
+    </tr>
+    <tr>
+        <th>外送</th>
+        <td>{$rijun_waisong}</td>
+        <td>{$rijun_waisong_percent}</td>
+
+        <th>外卖</th>
+        <td>{$ch_waimai}</td>
+        <td>{$ch_waimai_percent}</td>
+
+        
+        <th colspan="2">分类</th>
+        <th>本期用量(元)</th>
+        <th>占收入比</th>
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>促销</th>
+        <td>{$rijun_cuxiao}</td>
+        <td>{$rijun_cuxiao_percent}</td>
+
+        <th>团餐</th>
+        <td>{$ch_tuan}</td>
+        <td>{$ch_tuan_percent}</td>
+
+        <th colspan="2">用电</th>
+        <td>{$yongdian}</td>
+        <td>{$yongdian_percent}</td>
+        
+        
+
+    </tr>
+
+    <tr>
+        <th colspan="3"><b>促销收入统计</b></th>
+
+        <th>会展</th>
+        <td>{$ch_huizhan}</td>
+        <td>{$ch_huizhan_percent}</td>
+
+        
+        <th colspan="2">厨房用电</th>
+        <td>{$chufang}</td>
+        <td>{$chufang_percent}</td>
+        
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>分类</th>
+        <th>本期</th>
+        <th>占比</th>
+
+        <th rowspan="3">按折扣</th>
+        <th>应收</th>
+        <td>{$cost}</td>
+        <td>--</td>
+
+        
+        <th colspan="2">餐厅用电</th>
+        <td>{$dating}</td>
+        <td>{$dating_percent}</td>
+        
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>套餐销售</th>
+        <td>{$cuxiao_taocan}</td>
+        <td>{$cuxiao_taocan_percent}</td>
+
+        <th>实收</th>
+        <td>{$total}</td>
+        <td>--</td>
+
+        
+        <th colspan="2">用水</th>
+        <td>{$yongshui}</td>
+        <td>{$yongshui_percent}</td>
+        
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>连锁活动</th>
+        <td>{$cuxiao_wucan}</td>
+        <td>{$cuxiao_wucan_percent}</td>
+
+        <th>折扣率</th>
+        <td>{$discount}</td>
+        <td>--</td>
+
+        
+        <th colspan="4"><b>会员状况统计</b></th>
+        
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>常规优惠</th>
+        <td>{$cuxiao_changgui}</td>
+        <td>{$cuxiao_changgui_percent}</td>
+
+        
+        <th rowspan='2'>开业时间</th>
+        <th>年度新增</th>
+        <td>{$xinzeng}</td>
+        <td>{$xinzeng_zhanbi}</td>
+        
+        
+
+            
+        <th colspan="2">分类</th>
+        <th>本期</th>
+        <th>占比</th>
+        
+        
+
+    </tr>
+
+    <tr>
+        <th>团购销售</th>
+        <td>{$cuxiao_tuangou}</td>
+        <td>{$cuxiao_tuangou_percent}</td>
+
+        <th>同店同期</th>
+        <td>{$xinzeng}</td>
+        <td>{$xinzeng_zhanbi}</td>
+        
+        
+
+        
+        <th colspan="2">新增会员数</th>
+        <td></td>
+        <td></td>
+        
+        
+
+    </tr>
+    <tr>
+        <th colspan="3" rowspan="7"></th>
+        <th rowspan='4'>市场分类</th>
+        <th>商业店 </th>
+        <td></td>
+        <td></td>
+
+        <th colspan="2">新增积分</th>
+        <td></td>
+        <td></td>
+        
+        
+    </tr>
+    <tr>
+        <th>商务店</th>
+        <td></td>
+        <td></td>
+        
+        <th colspan="2">会员销售</th>
+        <td></td>
+        <td></td>
+        
+        
+    </tr>
+    <tr>
+        <th>社区店</th>
+        <td></td>
+        <td></td>
+
+        <th colspan="2">会员外卖</th>
+        <td></td>
+        <td></td>
+        
+        
+    </tr>
+    <tr>
+        <th>混合店</th>
+        <td></td>
+        <td></td>
+
+        <th colspan="2">积分兑换</th>
+        <td></td>
+        <td></td>
+        
+
+        
+    </tr>
+    <tr>
+        <th colspan="4">新品销售统计</th>
+        
+        <th colspan="2">会员客单价</th>
+        <td></td>
+        <td></td>
+       </tr> 
+    <tr>
+        <th>分类</th>
+        <th>名称</th>
+        <th>本期销售额</th>
+        <th>占比</th>
+        <th colspan="2">会员客流量</th>
+        <td></td>
+        <td></td>
+        </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <th colspan="2">会员折扣率</th>
+        <td></td>
+        <td></td>
+    </tr>
+</tbody></table>
+
+
+        
+        

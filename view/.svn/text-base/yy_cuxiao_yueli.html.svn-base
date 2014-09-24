@@ -1,0 +1,26 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2">日期<a class="ico {if $sortBy=='months'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="months"></a></th>
+        <th width="{80/5}%">促销收入<a class="ico {if $sortBy=='total'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="total"></a></th>
+        <th width="{80/5}%">套餐销售<a class="ico {if $sortBy=='taocan'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="taocan"></a></th>
+        <th width="{80/5}%">连锁活动<a class="ico {if $sortBy=='wucan'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="wucan"></a></th>
+        <th width="{80/5}%">常规优惠<a class="ico {if $sortBy=='changgui'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="changgui"></a></th>
+        <th width="{80/5}%">团购<a class="ico {if $sortBy=='tuangou'}{if $sortStatus==1}ico_up{else}ico_down{/if}{else}ico_default{/if}" data-type="tuangou"></a></th>
+    </tr>
+</thead>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr>
+        <th width="6%">{$info['month']}</th>
+        <th width="14%">{$info['fest']} </th>
+        <td>{$info['cuxiao']}</td>
+        <td>{$info['cuxiao_taocan']}</td>
+        <td>{$info['cuxiao_wucan']}</td>
+        <td>{$info['cuxiao_changgui']}</td>
+        <td>{$info['cuxiao_tuangou']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+
+

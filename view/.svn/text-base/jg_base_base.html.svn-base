@@ -1,0 +1,134 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2">加工中心汇总表</th>
+        {foreach $list as $id=>$info}
+        <th>{$info['title']}</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th rowspan="4" width="100">产值统计</th>
+        <th width="200">总产值（元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['lizhi']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>总工时（小时）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>工时产值（元/小时）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>产值占收入比</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    
+    <tr>
+        <th rowspan="5">能耗统计</th>
+        <th>电（度/千元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>水（吨/千元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>燃气（m3/千克）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>煤（吨/千元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>能耗费用占产值比（%）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>订单统计</th>
+        <th>订单完成率（%）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="4">质量统计</th>
+        <th>过程检查分数（分）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>投诉（起）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>退货数量（份）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>退货金额（元）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="3">管理统计</th>
+        <th>水电停供（小时）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>设备停运（起）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>安全事故（起）</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan='2'>可控费用达标率</th>
+        <th>加工</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>物流</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['luyong']}</td>
+        {/foreach}
+    </tr>
+    
+</tbody></table>
+

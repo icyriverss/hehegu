@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link href="images/print.css" media="screen" rel="stylesheet" type="text/css" />
+    <script type="text/javascript"  src="class/jquery.js"></script>
+    
+    <script type="text/javascript"  src="class/template.js"></script>
+    <script>
+        document.write('<script type="text/javascript"  src="moudle/core.min.js?ver=' + Math.random() + '"><\/script>');
+        document.write('<link href="images/print.css?ver=' + Math.random() + '" media="screen" rel="stylesheet" type="text/css" />');
+    </script>
+    <title>山西和合谷仓库出库单</title>
+    <style>
+    body {
+        claer:both;font-size:14px;background-color:#ffffff;
+    }
+    </style>
+    <script>
+        $(document).ready(function () {
+            my.debug = true;
+            var order_id = window.location.hash ? window.location.hash.substr(1) : '';
+            var order_ids = '';
+            if (!order_id) return $("#body").html('error');
+            if (order_id.indexOf(',')!=-1) {
+                order_ids = order_id.split(',');
+            }
+            my.util.send('order->getOrderInfo', {
+                id: order_id,
+                ids:order_ids
+            }, function (data) {
+                var types = [];
+                var total = {
+                    order_nums:0,
+                    real_send:0,
+                    type_name:'合计',
+                    type_index:0
+                };
+                $.each(data.list, function () {
+                    var info = this;
+                    if (!this.type_name) this.type_name = '临时增加';
+                    if (!types[this.type_name]) {
+                        types[this.type_name] = 1;
+                        this.type_index = 0;
+                    } else {
+                        this.type_index = types[this.type_name];
+                        types[this.type_name]++;
+                    }
+                    total.order_nums += parseFloat(this.order_nums) || 0;
+                    total.real_send += parseFloat(this.real_send) || 0;
+                    if(data.stores){
+                        $.each(data.stores,function(){
+                            total[this.bianhao] = total[this.bianhao] || 0;
+                            total[this.bianhao] += parseFloat(info[this.bianhao]) || 0;
+                            total[this.bianhao + '_send'] = total[this.bianhao  + '_send'] || 0;
+                            total[this.bianhao  + '_send'] += parseFloat(info[this.bianhao  + '_send']) || 0;
+                        });
+                    }
+                });
+                types['合计'] = 1;
+                data.list.push(total);
+                data.types = types;
+                data.ids = order_id;
+                var a = get_template_html('view/print.html?t=' + Math.random());
+                a = template(a, data);
+                $("#body").html(a);
+            }, function () {
+                $("#body").html('获取订单信息失败！');
+            });
+        });
+        function print_all() {
+            var a = $(document.body).html();
+            var b = $("#body").html();
+            $(document.body).html(b);
+            window.print();
+            $(document.body).html(a);
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <input type="button" value="打印出库单" onclick="print_all();"> 
+        <input type="button" value="关闭窗口" onclick="window.opener = null; window.open('', '_self'); window.close();"> 
+    </div>
+    <div id="body">请稍候，正在准备打印预览</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th colspan="2" width="20%">新品需求月历表</th>
+        {foreach $list as $id=>$info}
+        <th  width="{80/count($list)}%">{$info['month']}</th>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>分类</th>
+        <th>名称</th>
+        {foreach $list as $id=>$info}
+        <th width="6.6%">{$info['fest']}</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    {foreach $dishlist as $id=>$newinfo}
+    <tr>
+        <th width="10%">{$newinfo['vch_seriesname']}</th>
+        <th width="10%">{$newinfo['vch_dishname']}</th>
+        {foreach $list as $id=>$info}
+        <td>{$info[$newinfo['ch_dishno']]}</td>
+        {/foreach}
+    </tr>
+    {/foreach}
+</tbody></table>
+

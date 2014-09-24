@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<bundle minify="true" runOnBuild="true" output="core.js">
+  <!--The order of the <file> elements determines the order of them when bundled.-->
+<file>/moudle/my.js</file>
+  <file>/moudle/notice.js</file>
+  <file>/moudle/table.js</file>
+  <file>/moudle/menu.js</file>
+  <file>/moudle/view.js</file>
+  <file>/moudle/util.js</file>
+  <file>/moudle/user.js</file>
+  <file>/moudle/goods.js</file>
+  <file>/moudle/persons.js</file>
+  <file>/moudle/querypage.js</file>
+  <file>/moudle/user_level.js</file>
+  <file>/moudle/chejian.js</file>
+  <file>/moudle/shuidian.js</file>
+  <file>/moudle/order.js</file>
+  <file>/moudle/node.js</file>
+    <file>/moudle/node_menu.js</file>
+    <file>/moudle/node_child.js</file>
+    <file>/moudle/node_data.js</file>
+    <file>/moudle/node_do.js</file>
+    <file>/moudle/node_rs.js</file>
+
+    <file>/moudle/zhiwei.js</file>
+    <file>/moudle/node.js</file>
+</bundle>

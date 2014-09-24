@@ -1,0 +1,58 @@
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th rowspan="2" width="20%">销售年历表</th>
+        {foreach $list as $id=>$info}
+        <th width="{80/count($list)}%">{$info['years']}年</th>
+        {/foreach}
+    </tr>
+    <tr>
+        {foreach $list as $id=>$info}
+        <th>{$info['days']}天</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th>销售额</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['total']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>早餐</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zaocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>早班</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['wucan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>晚班</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['wancan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>外送销售额</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['waisong']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>套餐销售额</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['taocan']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>促销销售额</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['cuxiao']}</td>
+        {/foreach}
+    </tr>
+</tbody></table>
+

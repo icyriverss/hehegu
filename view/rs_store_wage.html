@@ -1,0 +1,35 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" >
+    <tr>
+        <th width="50">ID</th>
+        <th class="txtleft">姓名</th>
+        <th width="100">职位</th>
+        <th width="150">职位基本工资</th>
+        <th width="100">本月工时</th>
+        <th width="100">外卖数</th>
+        <th width="100">值夜次数</th>
+        <th width="100">工时工资</th>
+        <th width="100">加班工资</th>
+        <th width="100">外卖工资</th>
+        <th width="100">夜班工资</th>
+        <th width="100">本月总工资</th>
+    </tr>
+<tbody>
+    {foreach $list as $id=>$info}
+    <tr class="user_list">
+        <th>{$info['personnel_id']}</th>
+        <td class="txtleft">{$info['true_name']}</td>
+        <td>{$info['job']}</td>
+        <td>{$info['wage']}</td>
+        <td>{$info['gongshi']}</td>
+        <td>{$info['waimai']}</td>
+        <td>{$info['zhiye']}</td>
+        <td>{$info['gongshi_wage']}</td>
+        <td>{$info['jiaban_wage']}</td>
+        <td>{$info['waimai_wage']}</td>
+        <td>{$info['zhiye_wage']}</td>
+        <td>{$info['total_wage']}</td>
+    </tr>
+    {/foreach}
+</tbody></table>
+

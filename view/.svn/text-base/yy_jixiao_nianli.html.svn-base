@@ -1,0 +1,75 @@
+
+<table class="data-load"  border="0" cellspacing="0" cellpadding="0" ><thead>
+    <tr>
+        <th rowspan="2" colspan="2">绩效指标年历表</th>
+        {foreach $list as $id=>$info}
+        <th>{$info['years']}年</th>
+        {/foreach}
+    </tr>
+    <tr>
+        {foreach $list as $id=>$info}
+        <th>{$info['days']}天</th>
+        {/foreach}
+    </tr>
+</thead>
+<tbody>
+    <tr>
+        <th rowspan="3" width="10%">销售</th>
+        <th width="10%">客单价</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['kedanjia']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>价值数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['jiazhishu']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>丰收记录</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['fengshou']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th rowspan="3">顾客</th>
+        <th>客流量</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['keliuliang']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>人气数</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['renqi']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>客诉</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['kesu']}</td>
+        {/foreach}
+    </tr>
+    
+    <tr>
+        <th rowspan="3">员工</th>
+        <th>质量</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['zhiliang']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>工时收入</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['gongshi']}</td>
+        {/foreach}
+    </tr>
+    <tr>
+        <th>幸福奖</th>
+        {foreach $list as $id=>$info}
+        <td>{$info['xingfujiang']}</td>
+        {/foreach}
+    </tr>
+</tbody></table>
+
