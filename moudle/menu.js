@@ -145,13 +145,16 @@ my.menu.config = {
                 }, {
                     title: '百元耗电统计表',
                     moudle: 'yy_base_nhpmb'
-                }, {
-                    title: '百元耗电统计表-厨房',
-                    moudle: 'yy_base_nhpmb_chufang'
-                }, {
-                    title: '百元耗电统计表-餐厅',
-                    moudle: 'yy_base_nhpmb_canting'
-                }, {
+                }, 
+                // {
+                //     title: '百元耗电统计表-厨房',
+                //     moudle: 'yy_base_nhpmb_chufang'
+                // }, 
+                // {
+                //     title: '百元耗电统计表-餐厅',
+                //     moudle: 'yy_base_nhpmb_canting'
+                // }, 
+                {
                     title: '指标综合排名表',
                     moudle: 'yy_base_zbzhpmb'
                 }, {
